@@ -25,7 +25,7 @@ int converNumero(char caracteres[]){
 
     while(caracteres[cont]!='\0'){
         //El valor de '0' es el numero al que equivale el cero en ascii y el valor de caracteres[cont] tambien es el valor del caracter en ascii
-        //La resta entre caracteres es la resta entre los valores en ascii
+        //La resta entre caracteres es la resta entre los valores en ascii hola
         num = num*10 + caracteres[cont]-'0';
         cont++;
     }
