@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void modMatriz(unsigned int matriz1[5][5], unsigned int matriz2[5][5]);
-void mostrarMatriz(unsigned int matriz[5][5]);
-
+const unsigned int tam = 5;
+void modMatriz(unsigned int matriz1[][tam], unsigned int matriz2[][tam]);
+void mostrarMatriz(unsigned int matriz[][tam]);
 
 int main()
 {
-    unsigned int matOriginal[5][5], mat90[5][5], mat180[5][5], mat270[5][5];
+    unsigned int matOriginal[tam][tam], mat90[tam][tam], mat180[tam][tam], mat270[tam][tam];
     unsigned int valor = 1;
 
     for(unsigned int i = 0; i < 5; ++i){
@@ -30,7 +30,7 @@ int main()
 }
 
 
-void modMatriz(unsigned int matriz1[5][5], unsigned int matriz2[5][5]){
+void modMatriz(unsigned int matriz1[][tam], unsigned int matriz2[][tam]){
 
     unsigned int fil = 4, col = 0;
 
@@ -45,7 +45,7 @@ void modMatriz(unsigned int matriz1[5][5], unsigned int matriz2[5][5]){
 
 }
 
-void mostrarMatriz(unsigned int matriz[5][5]){
+void mostrarMatriz(unsigned int matriz[][tam]){
     for(unsigned int k = 0; k < 25; ++k){
         cout<<*(*matriz+k)<<" ";
     }
