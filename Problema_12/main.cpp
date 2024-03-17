@@ -13,12 +13,8 @@ int main()
     for(unsigned int i = 0; i < tamaño; i++){
         for(unsigned int j = 0; j < tamaño; j++){
 
-            unsigned int valor;
-
             cout<<"Ingrese el valor para la fila "<<i<<" columna "<<j<<": ";
-            cin>>valor;
-
-            M[i][j] = valor;
+            cin>>M[i][j];
         }
     }
 
