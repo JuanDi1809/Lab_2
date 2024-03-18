@@ -34,8 +34,8 @@ void modMatriz(unsigned int matriz1[][tam], unsigned int matriz2[][tam]){
 
     unsigned int fil = 4, col = 0;
 
-    for(unsigned int i = 0; i < 5; ++i){
-        for(unsigned int j = 0; j < 5; ++j){
+    for(unsigned int i = 0; i < tam; ++i){
+        for(unsigned int j = 0; j < tam; ++j){
             matriz2[i][j] = matriz1[fil][col];
             --fil;
         }
@@ -46,8 +46,11 @@ void modMatriz(unsigned int matriz1[][tam], unsigned int matriz2[][tam]){
 }
 
 void mostrarMatriz(unsigned int matriz[][tam]){
-    for(unsigned int k = 0; k < 25; ++k){
-        cout<<*(*matriz+k)<<" ";
+    for(unsigned int i = 0; i < tam; ++i){
+        for(unsigned int j = 0; j < tam; ++j){
+            cout << matriz[i][j] << " ";
+        }
+        cout<<endl;
     }
     cout<<endl;
 }
