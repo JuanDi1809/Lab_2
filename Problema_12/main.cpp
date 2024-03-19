@@ -8,15 +8,17 @@ int main()
     cout<<"Ingrese el tamagno de la matriz cuadrada: ";
     cin>>tam;
 
-    unsigned int M[tam][tam];
+    unsigned int **M = new unsigned int *[tam];
 
     for(unsigned int i = 0; i < tam; i++){
-        for(unsigned int j = 0; j < tam; j++){
+        M[i] = new unsigned int[tam];
 
-            cout<<"Ingrese el valor para la fila "<<i<<" columna "<<j<<": ";
+        for(unsigned int j = 0; j < tam; ++j){
+            cout << "Ingrese el valor para la fila " << i << " columna " << j << ": ";
             cin>>M[i][j];
         }
-    }
+     }
+
 
     for(unsigned int i = 0; i < tam; i++){
         sumaFila += *(*M+i);//Esta suma es de los valores de la primera fila;
@@ -30,6 +32,13 @@ int main()
     else{
         cout<<"La matriz no es magica";
     }
+
+    //Liberar matriz
+    for(unsigned int i = 0; i < tam; ++i){
+        delete[] M[i];
+    }
+
+    delete[] M;
 
     return 0;
 }
