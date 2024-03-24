@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+// Plantillas de funciones
+unsigned int** crearMatriz(unsigned short int tam);
+void mostrarMatriz(unsigned int **matriz, unsigned short int tam);
+
+// Cuerpo principal
+int main()
+{
+    unsigned short int tam;
+    cout << "Ingrese el tamaño de la matriz: ";
+    cin >> tam;
+    
+    unsigned int **matriz = crearMatriz(tam);
+    mostrarMatriz(matriz, tam);
+
+    // Liberar memoria
+    for (unsigned short int i = 0; i < tam; ++i) {
+        delete[] matriz[i];
+    }
+    delete[] matriz;
+
+    return 0;
+}
+
+// Creacion de funciones
+unsigned int **crearMatriz(unsigned short int tam) {
+    unsigned int **matriz = new unsigned int *[tam]; //Esto crea un arreglo de punteros
+    unsigned short int posicionCentro = tam / 2, valor = 1;
+
+    for (unsigned short int i = 0; i < tam; ++i) {
+        matriz[i] = new unsigned int[tam];
+
+        for (unsigned int j = 0; j < tam; ++j) {
+            if (i == posicionCentro && j == posicionCentro) {
+                matriz[i][j] = 0;
+            }
+            else {
+                matriz[i][j] = valor;
+                ++valor;
+            }
+        }
+    }
+
+    return matriz;
+}
+
+void mostrarMatriz(unsigned int **matriz, unsigned short int tam) {
+    for (unsigned int i = 0; i < tam; ++i) {
+        for (unsigned int j = 0; j < tam; ++j) {
+            cout << matriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
