@@ -1,0 +1,8 @@
+/**
+* @brief Crea una matriz usando memoria dinamica 
+* @param tam Es el tamaño que debe tner la matriz
+* @return Un doble puntero que apunta al arreglo de punteros que apuntan a las filas de la matriz 
+*/
+
+unsigned int** crearMatriz(unsigned short int tam);
+
