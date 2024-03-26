@@ -3,7 +3,7 @@
 * @param tam Es el tamaño que debe tner la matriz
 * @return Un doble puntero que apunta al arreglo de punteros que apuntan a las filas de la matriz 
 */
-unsigned int** crearMatriz(unsigned short int tam);
+int** createMatrix(unsigned short int tam);
 
 /**
 * @brief Libera la matriz creada con la memoria dinamica 
@@ -11,4 +11,4 @@ unsigned int** crearMatriz(unsigned short int tam);
 * @param tam es el tamaño de la matriz
 * @return No retorna nada 
 */
-void liberarMatriz(int **matriz, short int tam)
+void releaseMatrix(int **matrix, short int tam)
