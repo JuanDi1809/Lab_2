@@ -11,4 +11,4 @@ int** createMatrix(unsigned short int tam);
 * @param tam es el tamaño de la matriz
 * @return No retorna nada 
 */
-void releaseMatrix(int **matrix, short int tam)
+void deleteMemoryUsed(int **matrix, short int tam);
