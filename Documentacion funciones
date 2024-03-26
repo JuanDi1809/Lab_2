@@ -1,13 +1,13 @@
 /**
 * @brief Crea una matriz usando memoria dinamica 
-* @param dimension Es el tamaño que debe tner la matriz
+* @param dimension Es el tamaño que debe tener la matriz
 * @return Un doble puntero que apunta al arreglo de punteros que apuntan a las filas de la matriz 
 */
 int** createMatrix(unsigned short int dimension;
 
 /**
 * @brief Libera la matriz creada con la memoria dinamica 
-* @param matriz Un doble puntero que apunta al arreglo de punteros que apuntan a las filas de la matriz 
+* @param matrix Un doble puntero que apunta al arreglo de punteros que apuntan a las filas de la matriz 
 * @param dimension es el tamaño de la matriz
 * @return No retorna nada 
 */
