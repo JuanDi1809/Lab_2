@@ -1,14 +1,14 @@
 /**
 * @brief Crea una matriz usando memoria dinamica 
-* @param tam Es el tamaño que debe tner la matriz
+* @param dimension Es el tamaño que debe tner la matriz
 * @return Un doble puntero que apunta al arreglo de punteros que apuntan a las filas de la matriz 
 */
-int** createMatrix(unsigned short int tam);
+int** createMatrix(unsigned short int dimension;
 
 /**
 * @brief Libera la matriz creada con la memoria dinamica 
 * @param matriz Un doble puntero que apunta al arreglo de punteros que apuntan a las filas de la matriz 
-* @param tam es el tamaño de la matriz
+* @param dimension es el tamaño de la matriz
 * @return No retorna nada 
 */
-void deleteMemoryUsed(int **matrix, short int tam);
+void deleteMemoryUsed(int **matrix, short int dimension);
