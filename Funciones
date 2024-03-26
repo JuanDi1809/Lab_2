@@ -21,3 +21,11 @@ int **crearMatriz(unsigned short int tam) {
 }
 
 //Funcion liberar espacio de las matrices
+void liberarMatriz(int **matriz, short int tam){
+    
+    for (short int i = 0; i < tam; ++i) {
+        delete[] matriz[i];
+    }
+    delete[] matriz;
+    
+}
